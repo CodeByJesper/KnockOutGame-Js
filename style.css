@@ -1,0 +1,242 @@
+body{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #86C232;
+    background-color: #6B6E70;
+}
+
+button {
+    background-color: #6B6E70;
+    padding: 20px;
+    margin: 20px;
+    color: #222629;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+}
+button:hover{
+    background-color: #83878a;
+    transition: 1000ms;
+}
+
+div.wrapper{
+    width: 70%;
+    
+    box-sizing: border-box;
+    background-color: #222629;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 5px;
+}
+header{
+    height: 60px;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #1A1A1D;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header section.logo{
+    flex: 3;
+}
+
+header div.dice-container{
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+header div.dice-container img.dice{
+    width: 30px;
+    height: 30px;
+}
+
+div.wrapper section.timer-container{
+    display: flex; 
+    justify-content: flex-end;
+    padding-right: 40px;
+    
+}
+
+div.wrapper section.timer-container #box{
+    display: none; /*Set to flex in script.js */
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1D;
+    width: 150px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+div#knock-out-container{
+    display: none; /* This should be "none" by default - Sets to flex in game.js script */ 
+    justify-content: center;
+}
+
+div#knock-out-container img{
+    width: 60%;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    /*opacity: 0.7;*/
+}
+
+main{
+    padding-top: 30px;
+    position: relative;
+}
+main section#question-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main section#how-to-play-container{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+main section#start-game-container{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+main section#start-game-container input{
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #1a1a1d;
+    border-color: #86c232;
+    color: #86C232;
+}
+
+main section#start-game-container p{
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    background-color: #86C232;
+    color: white;
+}
+
+main section#start-game-container section.number-picker-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+main section#game-container{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+main section#game-container .score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+main section#game-container #dice-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+main section#game-container #dice-container #game-dice-one{
+    
+    justify-content: space-around;
+}
+
+main section#game-container section.roll-dice-btn-container #roll:disabled{
+    background-color: #222629;
+}
+main section#game-over-screen-container{
+    display: none;
+    flex-direction: column;
+
+}
+main section#game-over-screen-container section{
+    padding: 20px;
+}
+
+main section#game-over-screen-container section.header-container{
+    display: flex;
+    justify-content: center;
+}
+main section#game-over-screen-container section.score-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow-y: scroll;
+    height: 200px;
+}
+main section#game-over-screen-container section.play-again-container{
+    display: flex;
+    justify-content: center;
+}
+
+/* ## CSS for created elements in popUp.js script ## */
+body div#popUp-container{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 50%;
+    height: 400px;
+    padding: 40px;
+    z-index: 1;
+    position: absolute;
+    background-color: #86C232;
+    border-radius: 5%;
+}
+
+body div#popUp-container h1{
+    color: #1a1a1d;
+    padding-bottom: 20px;
+}
+body div#popUp-container h2{
+    color: #1a1a1d;
+    padding-bottom: 15px;
+}
+
+body div#popUp-container a{
+    color: #1a1a1d;
+    font-size: 50px;
+    align-self: flex-end;
+    text-decoration: none;
+}
+
+body div#popUp-container input{
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #1a1a1d;
+    border-color: #86c232;
+    color: #86C232;
+}
+
+main section#multiplier{
+    display: none;
+    height: 100px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    padding-left: 20px;
+}
+
+

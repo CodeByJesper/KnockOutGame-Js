@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Knock Out</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <section class="logo">
+                <h1>KNOCK OUT</h1>
+            </section>
+            <div class="dice-container">
+                <img class="dice" id="dice-one" src="images/d1.png" alt="">
+                <img class="dice" id="dice-two" src="images/d2.png" alt="">
+                <img class="dice" id="dice-three" src="images/d3.png" alt="">
+                <img class="dice" id="dice-four" src="images/d4.png" alt="">
+                <img class="dice" id="dice-five" src="images/d5.png" alt="">
+                <img class="dice" id="dice-six" src="images/d6.png" alt="">
+            </div>
+        </header>
+        <section class="timer-container">
+            <section id="box">
+                <h1 id="time-elapsed">0 seconds</h1>
+            </section>
+        </section>
+
+        <!-- Div for displaying knock out animation when the player looses -->
+        <div id="knock-out-container">
+            <img id="knock-out-img" src="images/knockout.png" alt="">
+        </div>
+        <main>
+            <section id="question-container">
+                <h1>Have you ever played Knock Out before?</h1>
+                <button class="btn" id="yes-played-btn">Yes</button>
+                <button class="btn" id="how-to-play-btn">How To Play</button>
+            </section>
+            <section id="how-to-play-container">
+                <h1>How to play Knock Out</h1>
+                <ol>
+                    <li>Spelaren väljer 6, 7, 8, eller 9 som deras "knock out" siffra.</li>
+                    <li>Spelaren kastar två tärningar samtidigt och adderar resultatet. Om det adderade värdet blir ditt "knock out"-nummer har du förlorat.</li>
+                    <li>För varje kast så räknas resultaten ihop till en totalsumma. Spelet går ut på att få så hög totalsumma som möjligt.</li>
+                </ol> 
+            </section>
+            <section id="start-game-container">
+                <h1 id="question-name-h1">What is your name?</h1>
+                <input type="text" id="player-name">
+                <h1 id="knock-out-picker-h1">Choose your Knock Out number</h1>
+                <section class="number-picker-container">
+                <button class="knock-out-number-btn" id="knock-out-number-btn-6" onclick="GetKnockOutNumber(6)">6</button>
+                <button class="knock-out-number-btn" id="knock-out-number-btn-7" onclick="GetKnockOutNumber(7)">7</button>
+                <button class="knock-out-number-btn" id="knock-out-number-btn-8" onclick="GetKnockOutNumber(8)">8</button>
+                <button class="knock-out-number-btn" id="knock-out-number-btn-9" onclick="GetKnockOutNumber(9)">9</button>
+                </section>
+                <button id="start-game-btn">Play</button>
+            </section>
+            <section id="game-container">
+                <section class="score">
+                    <h1 id="knock-out-number-label">Good luck</h1>
+                    <h1 id="score-points">SCORE 0pts</h1>
+                </section>
+                <section id="dice-container">
+                    <section class="game-dice-one">
+                        <img src="images/d4.png" id="game-dice-one" alt="">
+                    </section>
+                    <section class="game-dice-two">
+                        <img src="images/d3.png" id="game-dice-two" alt="">
+                    </section>
+                </section>
+                <section class="roll-dice-btn-container">
+                    <button id="roll">Roll Dice</button>
+                </section>
+            </section>
+            <section id="game-over-screen-container">
+                <section class="header-container">
+                    <h1>GAME OVER</h1>
+                </section>
+                <section class="score-container">
+                    <section id="game-over-timer-container">
+                        <h1>Time Alive</h1>
+                        <p id="timer"></p>
+                    </section>
+                    <section id="game-over-score-container">
+                        <h1>Score</h1>
+                        <p id="score"></p>
+                    </section>
+                    <section id="game-over-score-board-container">
+                        <h1>History</h1>
+                        <p id="scoreBoard"></p>
+                    </section>
+                </section>
+                <section class="play-again-container">
+                    <button id="play-again">Play Again</button>
+                </section>
+            </section>
+            <section id="multiplier"></section>
+        </main>
+        <script src="script/animate.js"></script>
+        <script src="script/handleForm.js"></script>
+        <script src="script/timer.js"></script>
+        <script src="script/popUp.js"></script>
+        <script src="script/game.js"></script>
+    </div>
+</body>
+</html>
